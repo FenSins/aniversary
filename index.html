@@ -2,100 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anniversary Gift Options</title>
+
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       min-height: 100vh;
-      font-family: Georgia, serif;
-      background: linear-gradient(135deg, #fff0f3, #ffe4ec, #f8d7da);
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: #4a1f2b;
+      align-items: center;
+      font-family: Georgia, serif;
+      background: linear-gradient(135deg, #fff0f5, #ffe4e9, #ffd6de);
+      overflow: hidden;
+      position: relative;
     }
 
     .container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.75);
-      padding: 40px 30px;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px rgba(120, 40, 60, 0.2);
-      max-width: 500px;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(10px);
+      padding: 45px 35px;
+      border-radius: 28px;
       width: 90%;
+      max-width: 520px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      z-index: 2;
     }
 
     h1 {
-      font-size: 2.2rem;
+      color: #8b1e3f;
+      font-size: 2.5rem;
       margin-bottom: 10px;
     }
 
-    p {
+    .subtitle {
+      color: #5a2a35;
       font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    .heart {
-      font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 35px;
+      line-height: 1.6;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-    }
-
-    a {
-      text-decoration: none;
+      gap: 18px;
     }
 
     .gift-btn {
       display: block;
-      padding: 16px;
-      border-radius: 30px;
-      background: #b84a62;
+      text-decoration: none;
+      background: #b9375d;
       color: white;
-      font-size: 1.05rem;
+      padding: 18px;
+      border-radius: 40px;
+      font-size: 1.08rem;
       font-weight: bold;
-      transition: 0.25s ease;
-      box-shadow: 0 5px 15px rgba(184, 74, 98, 0.3);
+      transition: 0.3s ease;
+      box-shadow: 0 8px 18px rgba(185,55,93,0.3);
     }
 
     .gift-btn:hover {
-      background: #8f2f46;
-      transform: translateY(-3px);
+      background: #922746;
+      transform: translateY(-4px) scale(1.02);
     }
 
-    footer {
-      margin-top: 25px;
-      font-size: 0.9rem;
-      opacity: 0.75;
+    .footer {
+      margin-top: 30px;
+      color: #6d3a47;
+      font-size: 0.95rem;
+    }
+
+    .heart {
+      position: absolute;
+      color: rgba(255,255,255,0.5);
+      animation: float 10s linear infinite;
+      font-size: 24px;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <!-- Floating Hearts -->
+  <div class="heart" style="left:10%; animation-delay:0s;">❤</div>
+  <div class="heart" style="left:25%; animation-delay:2s;">❤</div>
+  <div class="heart" style="left:45%; animation-delay:4s;">❤</div>
+  <div class="heart" style="left:65%; animation-delay:1s;">❤</div>
+  <div class="heart" style="left:85%; animation-delay:3s;">❤</div>
+
   <div class="container">
-    <div class="heart">❤️</div>
-    <h1>Happy Anniversary</h1>
-    <p>Pick one gift option below. Each one has a little surprise attached.</p>
+    <h1>Happy Anniversary ❤️</h1>
+
+    <p class="subtitle">
+      I wanted to make this a little more special.<br>
+      Pick your favorite gift option below ✨
+    </p>
 
     <div class="buttons">
-      <a href="#" target="_blank">
-        <span class="gift-btn">Gift Option 1</span>
+
+      <a class="gift-btn"
+         href="https://www.gucci.com/us/en/pr/women/handbags/mini-bags-for-women/ophidia-small-shoulder-bag-p-838463FAE0P9746"
+         target="_blank">
+         ✨ Gucci Shoulder Bag
       </a>
 
-      <a href="#" target="_blank">
-        <span class="gift-btn">Gift Option 2</span>
+      <a class="gift-btn"
+         href="https://oradina.com/products/regal-diamond-huggies"
+         target="_blank">
+         💎 Diamond Huggies
       </a>
 
-      <a href="#" target="_blank">
-        <span class="gift-btn">Gift Option 3</span>
+      <a class="gift-btn"
+         href="https://www.jamesavery.com/bracelets/connected-hearts-charm-bracelet/BR-684-721500.html?utm_content=brand&gclsrc=aw.ds&gad_source=1&gad_campaignid=21410462780&gclid=Cj0KCQjw2YDQBhD_ARIsAE1qeSeZxAC0kQC2eFXclqP-tQKnCkfqbogZya0eBp3U7icmwsA11RSJvaIaAg_QEALw_wcB"
+         target="_blank">
+         ❤️ Connected Hearts Bracelet
       </a>
+
     </div>
 
-    <footer>Made with love 💌</footer>
+    <div class="footer">
+      Made with love 💌
+    </div>
   </div>
+
 </body>
 </html>
