@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick Your Favorite ❤️</title>
+
+  <style>
+    body{
+      font-family:Georgia, serif;
+      background:linear-gradient(135deg,#fff0f5,#ffe0ea,#ffd6df);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      margin:0;
+    }
+
+    .box{
+      background:white;
+      padding:40px;
+      border-radius:25px;
+      text-align:center;
+      width:90%;
+      max-width:500px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    h1{
+      color:#8b1e3f;
+      margin-bottom:15px;
+    }
+
+    p{
+      color:#5a2a35;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .choice{
+      display:block;
+      width:100%;
+      margin-bottom:15px;
+      padding:18px;
+      border:none;
+      border-radius:35px;
+      background:#b9375d;
+      color:white;
+      font-size:1rem;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s ease;
+    }
+
+    .choice:hover{
+      background:#922746;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>Pick Your Favorite ❤️</h1>
+
+    <p>
+      Now that you've seen them all,<br>
+      which one would you want the most?
+    </p>
+
+    <button class="choice"
+      onclick="window.location.href='selected-gucci.html'">
+      ✨ Gucci Shoulder Bag
+    </button>
+
+    <button class="choice"
+      onclick="window.location.href='selected-earrings.html'">
+      💎 Diamond Huggies
+    </button>
+
+    <button class="choice"
+      onclick="window.location.href='selected-bracelet.html'">
+      ❤️ Connected Hearts Bracelet
+    </button>
+
+  </div>
+
+</body>
+</html>
